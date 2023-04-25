@@ -1,7 +1,11 @@
-# Very short description of the package
+# Short description of the package
 
-fintech-market.com Laravel API SDK
+fintech-market.com Laravel API SDK.
+At a moment this package supports only pushInquiry method.
 
+## Requirements
+- PHP >= 8.1
+- Laravel >= 9.0
 
 ## Installation
 
@@ -13,9 +17,11 @@ composer require hashstudio/fintech-market-sdk
 
 ## Usage
 
+publish config and set up api keys
 ```php
 php artisan vendor:publish --tag=fintech-market-config
 ```
+
 
 ```php
 use Hashstudio\FintechMarketSdk\FintechMarketSdk;
