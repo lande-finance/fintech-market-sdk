@@ -1,0 +1,55 @@
+{
+    "name": "hashstudio/fintech-market-sdk",
+    "description": "fintech market api description",
+    "keywords": [
+        "hashstudio",
+        "fintech-market-sdk"
+    ],
+    "homepage": "https://github.com/hashstudio/fintech-market-sdk",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alex Nastasin",
+            "email": "alex.nastasin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0",
+        "illuminate/http": "^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hashstudio\\FintechMarketSdk\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hashstudio\\FintechMarketSdk\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hashstudio\\FintechMarketSdk\\FintechMarketSdkServiceProvider"
+            ],
+            "aliases": {
+                "FintechMarketSdk": "Hashstudio\\FintechMarketSdk\\FintechMarketSdkFacade"
+            }
+        }
+    }
+}
